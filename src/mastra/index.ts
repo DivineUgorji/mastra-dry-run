@@ -17,7 +17,11 @@ export const mastra = new Mastra({
     releaseCommunicationWorkflow,
     renewalReviewWorkflow,
   },
-  storage: new LibSQLStore({ id: "main-storage", url: "file:mastra.db" }),
+  storage: new LibSQLStore({
+    id: "main-storage",
+    url: process.env.TURSO_DATABASE_URL || "file:mastra.db",
+    authToken: process.env.TURSO_AUTH_TOKEN,
+  }),
   scorers: {
     contentSimilarity: createContentSimilarityScorer(),
   },
