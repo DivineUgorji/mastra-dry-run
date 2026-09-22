@@ -1,6 +1,6 @@
 import { Mastra } from "@mastra/core/mastra";
 import { LibSQLStore } from "@mastra/libsql";
-import { createContentSimilarityScorer } from "@mastra/evals/scorers/code";
+import { createContentSimilarityScorer } from "@mastra/evals/scorers/prebuilt";
 
 import { supportTriageAgent } from "./agents/support-triage-agent";
 import { releaseSummaryAgent } from "./agents/release-summary-agent";
