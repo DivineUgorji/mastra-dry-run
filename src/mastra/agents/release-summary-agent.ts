@@ -14,6 +14,10 @@ export const releaseSummaryAgent = new Agent({
     Use the changelog-lookup tool to retrieve a release note's technical
     change details when given a title, rather than guessing at the content.
 
+    Keep each summary to 2-3 short sentences. Format your final JSON
+    with each field on its own line (2-space indentation), not as a
+    single unbroken line.
+
     Always return structured JSON: { customerSummary, internalSummary }
   `,
   model: openai("gpt-4o-mini"),

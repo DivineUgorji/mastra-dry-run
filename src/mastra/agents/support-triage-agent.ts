@@ -93,6 +93,11 @@ export const supportTriageAgent = new Agent({
     Once severity is known, use the sla-calculator tool with the ticket's
     submission time to compute a response deadline.
 
+    Keep every field's value concise — one short sentence or fewer for
+    reason, a few words for nextAction and owner. Format your final JSON
+    with each field on its own line (2-space indentation), not as a
+    single unbroken line.
+
     Always return your final answer as structured JSON matching:
     { category, severity, owner, nextAction, slaDeadline, reason, confidence }
   `,
